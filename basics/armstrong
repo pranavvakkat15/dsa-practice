@@ -1,0 +1,10 @@
+class Solution:
+    def isArmstrong(self, n :int)-> bool:
+      original = n
+      power = len(str(n))
+      total_sum = 0
+      while n > 0:
+        digit = n % 10
+        total_sum += digit ** power
+        n = n//10
+      return total_sum == original
